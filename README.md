@@ -16,7 +16,7 @@ This is my personal portfolio website, built with **Next.js**, **Tailwind CSS**,
 - [Tailwind CSS 4](https://tailwindcss.com/) – Styling
 - [Framer Motion](https://www.framer.com/motion/) – Animation
 - [Vercel](https://vercel.com/) – Hosting & Deployment
-- [Figma](https://img.shields.io/badge/Figma-Design-FF7262?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/Cb2svTQVZYKo8IwQMkXY7G/Portofolio---Enrio-Hernanda?node-id=0-1&p=f&t=Qeze7g0KFDLgdzG9-0) - Web Design
+- [Figma]([https://img.shields.io/badge/Figma-Design-FF7262?style=for-the-badge&logo=figma&logoColor=white](https://www.figma.com/design/Cb2svTQVZYKo8IwQMkXY7G/Portofolio---Enrio-Hernanda?node-id=0-1&p=f&t=Qeze7g0KFDLgdzG9-))] - Web Design
 
 ---
 
