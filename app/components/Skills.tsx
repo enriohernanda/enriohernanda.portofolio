@@ -15,7 +15,7 @@ const skills = [
   { name: 'HTML', icon: '/assets/icon/icon-html.svg' },
   { name: 'CSS', icon: '/assets/icon/icon-css.svg' },
   { name: 'MongoDB', icon: '/assets/icon/icon-mongoDB.svg' },
-  { name: 'MySQL', icon: '/assets/icon/icon-mySQL.svg' },
+  { name: 'MySQL', icon: '/assets/icon/icon-mySql.svg' },
 ];
 
 export default function Skills() {
