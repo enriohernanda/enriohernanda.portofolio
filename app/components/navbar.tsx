@@ -34,7 +34,7 @@ export default function Navbar() {
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex gap-6 font-medium items-center">
-              {['About', 'Projects', 'Contact'].map((item, i) => (
+              {['About', 'Experience', 'Projects', 'Certificate', 'Contact'].map((item, i) => (
                 <motion.li key={item} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 * (i + 1), duration: 0.4 }}>
                   <a href={`#${item.toLowerCase()}`} className="hover:underline">
                     {item}
