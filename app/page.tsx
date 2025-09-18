@@ -1,4 +1,5 @@
 import About from './components/About';
+import Certificate from './components/Certificate';
 import Contact from './components/Contact';
 import Experience from './components/Experience';
 import Footer from './components/Footer';
@@ -14,6 +15,7 @@ export default function Home() {
       <Skills />
       <Experience />
       <Projects />
+      <Certificate />
       <Contact />
       <Footer />
     </div>
