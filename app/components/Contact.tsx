@@ -20,7 +20,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="w-full py-20 bg-[#F9FAFB] dark:bg-[#111827] transition-colors duration-300">
+    <section id="contact" className="w-full py-20 bg-white dark:bg-black transition-colors duration-300">
       <Container>
         {/* Heading */}
         <div className="flex justify-center mb-6">
