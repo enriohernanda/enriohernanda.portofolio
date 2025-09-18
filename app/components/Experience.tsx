@@ -10,33 +10,44 @@ export default function Experience() {
       logo: '/assets/experience/logo-yarsi.svg',
       role: 'Frontend Developer',
       date: 'Mar 2025 - Aug 2025',
-      description: 'Successfully developed MRICondyleNET, a web-based AI platform for classifying temporomandibular joint (TMJ) MRI images quickly and accurately.',
       responsibilities: [
         'Designed the UI/UX in Figma',
         'Developed the entire frontend using Next.js and Tailwind CSS',
         'Built a responsive interface for desktop, tablet, and smartphone',
         'Implemented dark mode and light mode support',
         'Integrated the frontend with backend API services',
+        'Managed version control and project collaboration using GitHub',
         'Deployed and hosted the application on Vercel',
       ],
+      description: 'Tools: Next.js, Tailwind CSS, TypeScript, HTML, CSS, GitHub, Figma',
     },
     {
       id: 2,
       logo: '/assets/experience/logo-celerates.svg',
-      role: 'Web Development & UI UX Design',
+      role: 'Frontend Developer',
       date: 'Feb 2024 - Jun 2024',
-      description:
-        'Successfully completed the Independent Study program at PT Mitra Talenta Grup - Digital Creative, Data, Cybersecurity and Artificial Intelligence with the Celerates Acceleration Program - Web Development & UI UX Design activity held on February 16-June 30, 2024.',
-      responsibilities: [],
+      responsibilities: [
+        'Collaborated with the development team to build and test features for a React-based web application',
+        'Designed UI/UX in Figma',
+        'Built a responsive interface for desktop, tablet, and smartphone',
+        'Collaborated with backend team',
+        'Managed version control and project collaboration using GitHub',
+      ],
+      description: 'Tools: React.js, JavaScript, HTML, CSS, GitHub, Figma',
     },
     {
       id: 3,
       logo: '/assets/experience/logo-yarsi.svg',
       role: 'Android Developer',
       date: 'Sep 2023 - Mar 2024',
-      description:
-        'Successfully completed the assignment to become an Android Developer at Yarsi University in the Mobile Development study program. And participated in the "YARSI Informatics Engineering Specialization Track Exhibition" as a presenter in the Bersama Zakat: Aplikasi Kalkulator Zakat Berbasis Android Project. This exhibition is organized by Informatics Engineering, YARSI University, on March 21, 2024.',
-      responsibilities: [],
+      responsibilities: [
+        'Collaborated with the development team to build and test mobile application features',
+        'Designed UI/UX in Figma',
+        'Developed mobile user interfaces using Kotlin',
+        'Managed version control and project collaboration with GitHub',
+        'Applied Scrum methodology with weekly sprint planning sessions',
+      ],
+      description: 'Tools: Kotlin, Figma, GitHub, Trello',
     },
   ];
 
@@ -75,7 +86,6 @@ export default function Experience() {
                   <h4 className="text-lg font-bold text-[#111827] dark:text-[#F9FAFB]">{exp.role}</h4>
                   <span className="text-sm text-[#374151] dark:text-[#E5E7EB]">{exp.date}</span>
                 </div>
-                <p className="mt-2 text-[#4B5563] dark:text-[#D1D5DB] leading-relaxed">{exp.description}</p>
                 {exp.responsibilities.length > 0 && (
                   <ul className="mt-3 list-disc list-inside space-y-1 text-[#4B5563] dark:text-[#D1D5DB]">
                     {exp.responsibilities.map((task, i) => (
@@ -83,6 +93,7 @@ export default function Experience() {
                     ))}
                   </ul>
                 )}
+                <p className="mt-2 text-[#4B5563] dark:text-[#D1D5DB] leading-relaxed">{exp.description}</p>
               </div>
             </motion.div>
           ))}
