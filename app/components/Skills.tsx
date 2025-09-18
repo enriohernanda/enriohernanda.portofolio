@@ -12,6 +12,10 @@ const skills = [
   { name: 'Tailwindcss', icon: '/assets/icon/icon-tailwindcss.svg' },
   { name: 'Figma', icon: '/assets/icon/icon-figma.svg' },
   { name: 'Git', icon: '/assets/icon/icon-git.svg' },
+  { name: 'HTML', icon: '/assets/icon/icon-html.svg' },
+  { name: 'CSS', icon: '/assets/icon/icon-css.svg' },
+  { name: 'MongoDB', icon: '/assets/icon/icon-mongoDB.svg' },
+  { name: 'MySQL', icon: '/assets/icon/icon-mySQL.svg' },
 ];
 
 export default function Skills() {
@@ -39,7 +43,7 @@ export default function Skills() {
               transition: { staggerChildren: 0.1 },
             },
           }}
-          className="grid grid-cols-3 md:grid-cols-8 gap-8 items-center justify-items-center"
+          className="grid grid-cols-3 md:grid-cols-12 gap-8 items-center justify-items-center"
         >
           {skills.map((skill) => (
             <motion.div
@@ -51,9 +55,9 @@ export default function Skills() {
               className="flex flex-col items-center gap-2"
             >
               <div className="w-20 h-20 flex items-center justify-center">
-                <Image src={skill.icon} alt={skill.name} width={60} height={60} className="object-contain hover:scale-110 transition-transform" />
+                <Image src={skill.icon} alt={skill.name} width={45} height={45} className="object-contain hover:scale-110 transition-transform" />
               </div>
-              <span className="text-sm md:text-base text-[#4B5563] dark:text-[#D1D5DB]">{skill.name}</span>
+              <span className="text-sm lg:text-base text-[#4B5563] dark:text-[#D1D5DB]">{skill.name}</span>
             </motion.div>
           ))}
         </motion.div>
