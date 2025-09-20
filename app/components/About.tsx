@@ -49,7 +49,7 @@ export default function About() {
           className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 text-[#4B5563] dark:text-[#D1D5DB]"
         >
           <ul className="list-disc list-inside space-y-2">
-            <li>Bachelor of Computer Science, Universitas YARSI</li>
+            <li>Bachelor of Computer Science, Universitas YARSI (GPA 3.73/4.00)</li>
             <li>Skilled in React.js, Next.js, Tailwind CSS, JavaScript, and HTML/CSS</li>
           </ul>
           <ul className="list-disc list-inside space-y-2">
@@ -60,7 +60,7 @@ export default function About() {
 
         {/* Closing */}
         <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} viewport={{ once: true }} className="mt-8 text-[#4B5563] dark:text-[#D1D5DB]">
-          I’m always excited to connect with like-minded people, contribute to impactful projects, and grow as a developer. Feel free to reach out — I’d be more than happy to chat! <span className="inline-block">😊</span>
+          I’m always excited to connect with like-minded people, contribute to impactful projects, and grow as a developer. Feel free to reach out — I’d be more than happy to chat!
         </motion.p>
       </Container>
     </section>
