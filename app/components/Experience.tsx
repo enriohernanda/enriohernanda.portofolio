@@ -9,6 +9,7 @@ export default function Experience() {
       id: 1,
       logo: '/assets/experience/logo-yarsi.svg',
       role: 'Frontend Developer',
+      company: 'Universitas Yarsi',
       date: 'Mar 2025 - Aug 2025',
       responsibilities: [
         'Designed the UI/UX in Figma',
@@ -25,6 +26,7 @@ export default function Experience() {
       id: 2,
       logo: '/assets/experience/logo-celerates.svg',
       role: 'Frontend Developer',
+      company: 'Studi Independen MSIB Batch 6 - PT Mitra Talenta Grup',
       date: 'Feb 2024 - Jun 2024',
       responsibilities: [
         'Collaborated with the development team to build and test features for a React-based web application',
@@ -39,6 +41,7 @@ export default function Experience() {
       id: 3,
       logo: '/assets/experience/logo-yarsi.svg',
       role: 'Android Developer',
+      company: 'Universitas Yarsi',
       date: 'Sep 2023 - Mar 2024',
       responsibilities: [
         'Collaborated with the development team to build and test mobile application features',
@@ -86,6 +89,7 @@ export default function Experience() {
                   <h4 className="text-lg font-bold text-[#111827] dark:text-[#F9FAFB]">{exp.role}</h4>
                   <span className="text-sm text-[#374151] dark:text-[#E5E7EB]">{exp.date}</span>
                 </div>
+                <p className="text-[#374151] dark:text-[#E5E7EB]">{exp.company}</p>
                 {exp.responsibilities.length > 0 && (
                   <ul className="mt-3 list-disc list-inside space-y-1 text-[#4B5563] dark:text-[#D1D5DB]">
                     {exp.responsibilities.map((task, i) => (
