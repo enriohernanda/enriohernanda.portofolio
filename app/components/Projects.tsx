@@ -6,29 +6,47 @@ import Container from './layout/Container';
 const projects = [
   {
     id: 1,
+    title: 'Mini Shop e-commerce',
+    image: '/assets/projects/project-minishop.svg',
+    description:
+      'Built a responsive mini e-commerce frontend using Next.js, React, and Tailwind CSS. Features include product listing with search & filter, product detail page, cart management with localStorage, and checkout functionality. Demonstrates API integration, state management, and responsive UI design.',
+    tags: ['Next.js', 'React.js', 'Typescript', 'Tailwindcss', 'Framer Motion', 'GitHub'],
+    link: 'https://github.com/enriohernanda/mini-shop-ecommerce',
+  },
+  {
+    id: 2,
+    title: 'NextVision Landing Page',
+    image: '/assets/projects/project-nextvision.svg',
+    description:
+      'NextVision is a web platform built with Next.js and Tailwind CSS. This website features a modern landing page with interactive animations using Framer Motion. It includes sections like Hero, Features, Testimonials, and Contact, all designed to be fully responsive and visually appealing across devices.',
+    tags: ['Next.js', 'React.js', 'Typescript', 'Tailwindcss', 'Framer Motion', 'GitHub'],
+    link: 'https://github.com/enriohernanda/Landing-Page-NextVision',
+  },
+  {
+    id: 3,
     title: 'MRICondyleNet',
     image: '/assets/projects/project-mricondylenet.svg',
     description:
       'MRICondyleNet is a web-based application for detecting Temporomandibular Joint (TMJ) conditions through MRI images with the help of an AI model. Built using Next.js and Tailwind CSS, the application allows users to upload images, view predictions, and manage data using a modern, interactive interface.',
-    tags: ['React', 'Next.js', 'Typescript', 'Tailwindcss', 'Figma', 'Git'],
+    tags: ['Next.js', 'React.js', 'Typescript', 'Tailwindcss', 'Framer Motion', 'Figma', 'GitHub'],
     link: 'https://github.com/enriohernanda/Frontend-MRICondyleNet',
   },
   {
-    id: 2,
+    id: 4,
     title: 'MopArt',
     image: '/assets/projects/project-mopart.svg',
     description:
       'MopArt is an innovative website designed with the aim of introducing and promoting painting to the public. This website was created in a group with 6 members consisting of 1 hustler, 3 hipsters and 2 hackers. When creating this website, I served as a hacker who handled the entire frontend of the website.',
-    tags: ['React', 'Javascript', 'Bootstrap', 'HTML', 'CSS', 'Figma', 'Git'],
+    tags: ['React.js', 'HTML', 'CSS', 'Javascript', 'Bootstrap', 'Figma', 'GitHub'],
     link: 'https://github.com/enriohernanda/Project-Massive_Compro-Developers',
   },
   {
-    id: 3,
+    id: 5,
     title: 'Bersama Zakat',
     image: '/assets/projects/project-berkat.svg',
     description:
       'Bersama Zakat is an Android app that teaches you about zakat, how to calculate it, and its benefits. It also helps you pay zakat according to Islamic law. You can learn about various types of zakat, such as zakat on gold, zakat on fitrah, zakat on professions, zakat on agriculture, zakat on livestock, and zakat on fisheries. The app also provides information on zakat law from various perspectives.',
-    tags: ['Kotlin', 'Figma', 'Git'],
+    tags: ['Kotlin', 'Figma', 'GitHub'],
     link: 'https://github.com/Ardiansputrraa/Bersama-Zakat-App',
   },
 ];
