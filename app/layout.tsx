@@ -5,6 +5,9 @@ import Navbar from './components/navbar';
 export const metadata: Metadata = {
   title: 'Portofolio Enrio',
   description: 'Frontend Developer Portfolio',
+  icons: {
+    icon: '/assets/logo-portfolio.svg',
+  },
 };
 
 export default function RootLayout({
