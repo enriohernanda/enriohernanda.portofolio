@@ -6,6 +6,15 @@ import Container from './layout/Container';
 const certificate = [
   {
     id: 1,
+    title: 'TOEIC Certification',
+    image: '/assets/certificate/sertifikat_toeic_enrio.svg',
+    description:
+      'Achieved a TOEIC score of 580, demonstrating proficiency in English for professional and academic purposes. The TOEIC test assesses listening and reading skills, which are essential for effective communication in a global work environment.',
+    credential: '',
+    date: 'Jun 2025',
+  },
+  {
+    id: 2,
     title: 'Web Development & UI/UX Design',
     image: '/assets/certificate/sertifikat_msib_enrio.svg',
     description:
@@ -14,7 +23,7 @@ const certificate = [
     date: 'Jun 2024',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Web Development & UI/UX Design',
     image: '/assets/certificate/sertifikat_celerates_enrio.svg',
     description:
@@ -23,7 +32,7 @@ const certificate = [
     date: 'Jun 2024',
   },
   {
-    id: 3,
+    id: 4,
     title: 'YARSI Informatics Engineering Specialization Track Exhibition',
     image: '/assets/certificate/sertifikat_informatics_engineering_specialization_track_exhibition.svg',
     description:
