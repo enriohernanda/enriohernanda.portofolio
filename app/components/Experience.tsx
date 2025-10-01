@@ -7,6 +7,23 @@ export default function Experience() {
   const experiences = [
     {
       id: 1,
+      logo: '/assets/experience/logo-yarsi.svg',
+      role: 'Frontend Developer',
+      company: 'Universitas YARSI',
+      date: 'Mar 2025 - Aug 2025',
+      responsibilities: [
+        'Designed the UI/UX in Figma',
+        'Developed the entire frontend using Next.js and Tailwind CSS',
+        'Built a responsive interface for desktop, tablet, and smartphone',
+        'Implemented dark mode and light mode support',
+        'Integrated the frontend with backend API services',
+        'Managed version control and project collaboration using GitHub',
+        'Deployed and hosted the application on Vercel',
+      ],
+      description: 'Tools: Next.js, Tailwind CSS, TypeScript, HTML, CSS, GitHub, Figma, Vercel',
+    },
+    {
+      id: 2,
       logo: '/assets/experience/logo-celerates.svg',
       role: 'Web Development & UI/UX Design',
       company: 'Studi Independen MSIB Batch 6 - PT Mitra Talenta Grup',
