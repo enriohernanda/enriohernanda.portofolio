@@ -4,18 +4,20 @@ import { motion } from 'framer-motion';
 import Container from './layout/Container';
 
 const skills = [
+  { name: 'HTML', icon: '/assets/icon/icon-html.svg' },
+  { name: 'CSS', icon: '/assets/icon/icon-css.svg' },
   { name: 'Javascript', icon: '/assets/icon/icon-javscript.svg' },
+  { name: 'PHP', icon: '/assets/icon/icon-php.svg' },
   { name: 'Typescript', icon: '/assets/icon/icon-typescript.svg' },
   { name: 'React', icon: '/assets/icon/icon-react.svg' },
   { name: 'Next.js', icon: '/assets/icon/icon-nextjs.svg' },
-  { name: 'Node.js', icon: '/assets/icon/icon-nodejs.svg' },
+  { name: 'Laravel', icon: '/assets/icon/icon-laravel.svg' },
   { name: 'Tailwindcss', icon: '/assets/icon/icon-tailwindcss.svg' },
-  { name: 'Figma', icon: '/assets/icon/icon-figma.svg' },
-  { name: 'Git', icon: '/assets/icon/icon-git.svg' },
-  { name: 'HTML', icon: '/assets/icon/icon-html.svg' },
-  { name: 'CSS', icon: '/assets/icon/icon-css.svg' },
-  { name: 'MongoDB', icon: '/assets/icon/icon-mongoDB.svg' },
+  { name: 'Bootstrap', icon: '/assets/icon/icon-bootstrap.svg' },
   { name: 'MySQL', icon: '/assets/icon/icon-mySql.svg' },
+  { name: 'Node.js', icon: '/assets/icon/icon-nodejs.svg' },
+  { name: 'Git', icon: '/assets/icon/icon-git.svg' },
+  { name: 'Figma', icon: '/assets/icon/icon-figma.svg' },
 ];
 
 export default function Skills() {
@@ -43,7 +45,7 @@ export default function Skills() {
               transition: { staggerChildren: 0.1 },
             },
           }}
-          className="grid grid-cols-3 md:grid-cols-12 gap-8 items-center justify-items-center"
+          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-8 items-center justify-items-center"
         >
           {skills.map((skill) => (
             <motion.div
