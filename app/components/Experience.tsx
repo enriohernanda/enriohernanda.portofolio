@@ -7,24 +7,35 @@ export default function Experience() {
   const experiences = [
     {
       id: 1,
+      logo: '/assets/experience/logo-ppkdjp.jpeg',
+      role: 'Web Programmer Trainee',
+      company: 'PPKD Jakarta Pusat',
+      date: 'Oct 2025 - Present',
+      responsibilities: [
+        'Learned both frontend and backend web development using HTML, CSS, JavaScript, React.js, Bootstrap, and PHP (Laravel Framework)',
+        'Utilized XAMPP for local server setup and phpMyAdmin for MySQL database management.',
+        'Built responsive web interfaces and data-driven applications as part of training projects.',
+      ],
+    },
+    {
+      id: 2,
       logo: '/assets/experience/logo-yarsi.svg',
       role: 'Frontend Developer',
       company: 'Universitas YARSI',
       date: 'Mar 2025 - Aug 2025',
       responsibilities: [
-        'Designed the UI/UX in Figma',
+        'Designed UI/UX prototypes in Figma and implemented them into code',
         'Developed the entire frontend using Next.js and Tailwind CSS',
         'Built a responsive interface for desktop, tablet, and smartphone',
         'Implemented dark mode and light mode support',
         'Integrated the frontend with backend API services',
-        'Managed version control and project collaboration using GitHub',
+        'Managed version control and team collaboration using GitHub',
         'Deployed and hosted the application on Vercel',
       ],
-      description: 'Tools: Next.js, Tailwind CSS, TypeScript, HTML, CSS, GitHub, Figma, Vercel',
     },
     {
-      id: 2,
-      logo: '/assets/experience/logo-celerates.svg',
+      id: 3,
+      logo: '/assets/experience/logo-celerates.png',
       role: 'Web Development & UI/UX Design',
       company: 'Studi Independen MSIB Batch 6 - PT Mitra Talenta Grup',
       date: 'Feb 2024 - Jun 2024',
@@ -34,7 +45,6 @@ export default function Experience() {
         'Developed a responsive interface optimized for desktop, tablet, and mobile devices',
         'Managed version control and team collaboration using GitHub',
       ],
-      description: 'Tools: React.js, HTML, CSS, JavaScript, Bootstrap, Figma, GitHub',
     },
   ];
 
@@ -81,7 +91,7 @@ export default function Experience() {
                     ))}
                   </ul>
                 )}
-                <p className="mt-2 text-[#4B5563] dark:text-[#D1D5DB] leading-relaxed">{exp.description}</p>
+                {/* <p className="mt-2 text-[#4B5563] dark:text-[#D1D5DB] leading-relaxed">{exp.description}</p> */}
               </div>
             </motion.div>
           ))}
