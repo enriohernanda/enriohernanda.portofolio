@@ -24,19 +24,19 @@ export default function About() {
 
         {/* Paragraphs */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} viewport={{ once: true }} className="space-y-4 text-[#4B5563] dark:text-[#D1D5DB] leading-relaxed">
-          <p>Hi, I’m Enrio Hernanda — a passionate Frontend Developer and fresh graduate in Computer Science from Universitas YARSI. I have a strong enthusiasm for crafting modern, responsive, and user-friendly web applications.</p>
           <p>
-            My journey in web development started during my university years, where I explored the foundations of the web — HTML, CSS, and JavaScript. Over time, I grew more interested in bringing interfaces to life, which led me to dive
-            deeper into React.js, Next.js, and Tailwind CSS. Through academic projects and personal explorations, I’ve built hands-on experience turning design ideas into fully functional applications.
+            Hi, I’m Enrio Hernanda — a passionate Web Developer with a strong focus on frontend development. I recently graduated with a Bachelor of Computer Science from Universitas YARSI (GPA 3.73/4.00), where I developed a deep interest
+            in building modern and user-friendly digital experiences.
           </p>
           <p>
-            What excites me the most is the process of creating digital products that feel smooth, efficient, and delightful to use. I value clean code, responsiveness, and accessibility, making sure every user has a seamless experience no
-            matter the device.
+            My journey began with the fundamentals — HTML, CSS, and JavaScript — and has grown into hands-on experience using modern tools like React.js, Next.js, Tailwind CSS, and Laravel. I enjoy turning ideas and UI designs into fully
+            functional, responsive, and accessible web applications.
           </p>
           <p>
-            Beyond coding, I see myself as a continuous learner. I love staying updated with emerging technologies, experimenting with new tools, and challenging myself with projects that push my boundaries. To me, web development isn’t
-            just about code — it’s about problem-solving, creativity, and building something meaningful.
+            Throughout academic projects, independent learning, and practical experience, I’ve learned the importance of clean code, performance, and creating interfaces that work smoothly across devices. I also have experience in RESTful
+            API integration, version control with Git/GitHub, manual testing, and working in collaborative environments.
           </p>
+          <p>I’m a continuous learner who loves exploring new technologies and improving my skills. For me, web development is not just about coding — it’s about solving problems, understanding users, and building meaningful solutions.</p>
           <p>Finally, some quick bits about me.</p>
         </motion.div>
 
@@ -50,17 +50,17 @@ export default function About() {
         >
           <ul className="list-disc list-inside space-y-2">
             <li>Bachelor of Computer Science, Universitas YARSI (GPA 3.73/4.00)</li>
-            <li>Skilled in React.js, Next.js, Tailwind CSS, JavaScript, and HTML/CSS</li>
+            <li>Skilled in React.js, Next.js, Tailwind CSS, JavaScript, HTML/CSS, PHP, and Laravel</li>
           </ul>
           <ul className="list-disc list-inside space-y-2">
-            <li>Passionate about Frontend Development</li>
+            <li>Passionate about frontend development and building scalable web applications</li>
             <li>Open to collaboration and eager to grow in a professional environment</li>
           </ul>
         </motion.div>
 
         {/* Closing */}
         <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} viewport={{ once: true }} className="mt-8 text-[#4B5563] dark:text-[#D1D5DB]">
-          I’m always excited to connect with like-minded people, contribute to impactful projects, and grow as a developer. Feel free to reach out — I’d be more than happy to chat!
+          I’m always excited to connect, collaborate on impactful projects, and continue growing as a developer. Feel free to reach out — I’d be happy to chat!
         </motion.p>
       </Container>
     </section>
