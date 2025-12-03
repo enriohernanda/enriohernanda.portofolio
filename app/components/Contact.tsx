@@ -1,84 +1,63 @@
 'use client';
 import Image from 'next/image';
-import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Container from './layout/Container';
 
 export default function Contact() {
-  const [copied, setCopied] = useState<'email' | 'phone' | null>(null);
-
-  const copyToClipboard = (text: string, type: 'email' | 'phone') => {
-    if (typeof navigator !== 'undefined' && navigator.clipboard) {
-      navigator.clipboard
-        .writeText(text)
-        .then(() => {
-          setCopied(type);
-          setTimeout(() => setCopied(null), 2000);
-        })
-        .catch((err) => console.error('Copy failed:', err));
-    }
-  };
-
   return (
     <section id="contact" className="w-full py-20 bg-white dark:bg-black transition-colors duration-300">
       <Container>
         {/* Heading */}
         <div className="flex justify-center mb-6">
-          <h3 className="text-[#4B5563] dark:text-[#D1D5DB] rounded-3xl py-1 px-4 bg-[#E5E7EB] dark:bg-[#374151]">Get in touch</h3>
+          <h3 className="text-[#4B5563] dark:text-[#D1D5DB] rounded-3xl py-1 px-4 bg-[#E5E7EB] dark:bg-[#374151]">Contact Me</h3>
         </div>
 
-        {/* Subheading */}
-        <p className="text-center text-[#4B5563] dark:text-[#D1D5DB] mb-10 text-lg md:w-1/2 mx-auto">What’s next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect.</p>
+        {/* FORM SECTION - Web3Forms */}
+        <motion.form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-xl mx-auto bg-[#F9FAFB] dark:bg-[#111827] p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700"
+        >
+          {/* ACCESS KEY */}
+          <input type="hidden" name="access_key" value="6450f781-7097-455d-8b2a-ac94b13fc31e" />
 
-        {/* Contact Info */}
-        <div className="flex flex-col items-center gap-6">
+          {/* Name */}
+          <label className="block mb-4">
+            <span className="text-[#4B5563] dark:text-[#D1D5DB]">Name</span>
+            <input type="text" name="name" required className="mt-2 w-full p-3 rounded-lg bg-white dark:bg-[#1F2937] border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200" placeholder="Enter your name" />
+          </label>
+
           {/* Email */}
-          <div className="flex items-center gap-4">
-            <Image src="/assets/icon/icon-mailLight.svg" alt="Email" width={30} height={30} className="dark:hidden" />
-            <Image src="/assets/icon/icon-mailDark.svg" alt="Email" width={30} height={30} className="hidden dark:block" />
-            <span className="text-[#4B5563] dark:text-[#D1D5DB] text-lg md:text-3xl font-semibold">enriohernanda@gmail.com</span>
+          <label className="block mb-4">
+            <span className="text-[#4B5563] dark:text-[#D1D5DB]">Email</span>
+            <input type="email" name="email" required className="mt-2 w-full p-3 rounded-lg bg-white dark:bg-[#1F2937] border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200" placeholder="Enter your email" />
+          </label>
 
-            {/* Copy Button with bounce */}
-            <motion.button whileTap={{ scale: 0.8, rotate: -10 }} onClick={() => copyToClipboard('enriohernanda@gmail.com', 'email')} className="flex items-center cursor-pointer">
-              <Image src="/assets/button/button-copyLight.svg" alt="Copy Email" width={24} height={24} className="dark:hidden" />
-              <Image src="/assets/button/button-copyDark.svg" alt="Copy Email" width={24} height={24} className="hidden dark:block" />
-            </motion.button>
+          {/* Message */}
+          <label className="block mb-6">
+            <span className="text-[#4B5563] dark:text-[#D1D5DB]">Message</span>
+            <textarea
+              name="message"
+              required
+              rows={5}
+              className="mt-2 w-full p-3 rounded-lg bg-white dark:bg-[#1F2937] border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200"
+              placeholder="Write your message..."
+            ></textarea>
+          </label>
 
-            {/* Animated Copied Message */}
-            <AnimatePresence>
-              {copied === 'email' && (
-                <motion.span key="copied-email" initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -5 }} transition={{ duration: 0.3 }} className="text-green-500 text-sm ml-2">
-                  Copied!
-                </motion.span>
-              )}
-            </AnimatePresence>
-          </div>
+          {/* Submit Button */}
+          <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} type="submit" className="w-full py-3 rounded-xl bg-black dark:bg-white text-white dark:text-black font-semibold shadow-md cursor-pointer">
+            Send Message
+          </motion.button>
+        </motion.form>
 
-          {/* Phone */}
-          <div className="flex items-center gap-4">
-            <Image src="/assets/icon/icon-telephoneLight.svg" alt="Phone" width={30} height={30} className="dark:hidden" />
-            <Image src="/assets/icon/icon-telephoneDark.svg" alt="Phone" width={30} height={30} className="hidden dark:block" />
-            <span className="text-[#4B5563] dark:text-[#D1D5DB] text-lg md:text-3xl font-semibold">+62 87773507317</span>
-
-            {/* Copy Button with bounce */}
-            <motion.button whileTap={{ scale: 0.8, rotate: -10 }} onClick={() => copyToClipboard('+62 87773507317', 'phone')} className="flex items-center cursor-pointer">
-              <Image src="/assets/button/button-copyLight.svg" alt="Copy Phone" width={24} height={24} className="dark:hidden" />
-              <Image src="/assets/button/button-copyDark.svg" alt="Copy Phone" width={24} height={24} className="hidden dark:block" />
-            </motion.button>
-
-            {/* Animated Copied Message */}
-            <AnimatePresence>
-              {copied === 'phone' && (
-                <motion.span key="copied-phone" initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -5 }} transition={{ duration: 0.3 }} className="text-green-500 text-sm ml-2">
-                  Copied!
-                </motion.span>
-              )}
-            </AnimatePresence>
-          </div>
-        </div>
-
+        {/* Socials */}
         <p className="text-center text-[#4B5563] dark:text-[#D1D5DB] mt-10 text-lg md:w-1/2 mx-auto">You may also find me on these platforms!</p>
-        {/* Social Icons with hover + tap animation */}
+
         <div className="flex justify-center gap-6 mt-10">
           {[
             {
