@@ -6,6 +6,15 @@ import Container from './layout/Container';
 const certificate = [
   {
     id: 1,
+    title: 'Web Programming Training',
+    image: '/assets/certificate/sertifikat_ppkd_enrio.svg',
+    description:
+      'Has participated in the Web Programming Work Skills Training Batch IV (Four) held by Pusat Pelatihan Kerja Daerah Jakarta Pusat from October 1 to November 28, 2025. This training focuses on developing skills in web programming, including front-end and back-end development, to enhance employability in the IT sector.',
+    credential: 'Credential ID T2.57.WPR.KT.02.03.2505866',
+    date: 'Nov 2025',
+  },
+  {
+    id: 2,
     title: 'TOEIC Certification',
     image: '/assets/certificate/sertifikat_toeic_enrio.svg',
     description:
@@ -14,7 +23,7 @@ const certificate = [
     date: 'Jun 2025',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Web Development & UI/UX Design',
     image: '/assets/certificate/sertifikat_msib_enrio.svg',
     description:
@@ -23,7 +32,7 @@ const certificate = [
     date: 'Jun 2024',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Web Development & UI/UX Design',
     image: '/assets/certificate/sertifikat_celerates_enrio.svg',
     description:
@@ -32,7 +41,7 @@ const certificate = [
     date: 'Jun 2024',
   },
   {
-    id: 4,
+    id: 5,
     title: 'YARSI Informatics Engineering Specialization Track Exhibition',
     image: '/assets/certificate/sertifikat_informatics_engineering_specialization_track_exhibition.svg',
     description:

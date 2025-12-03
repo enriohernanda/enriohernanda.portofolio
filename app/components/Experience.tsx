@@ -10,7 +10,7 @@ export default function Experience() {
       logo: '/assets/experience/logo-ppkdjp.jpeg',
       role: 'Web Programmer Trainee',
       company: 'PPKD Jakarta Pusat',
-      date: 'Oct 2025 - Present',
+      date: 'Oct 2025 - Dec 2025',
       responsibilities: [
         'Learned both frontend and backend web development using HTML, CSS, JavaScript, React.js, Bootstrap, and PHP (Laravel Framework)',
         'Utilized XAMPP for local server setup and phpMyAdmin for MySQL database management.',
