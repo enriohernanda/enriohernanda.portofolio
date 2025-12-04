@@ -15,7 +15,7 @@ const certificate = [
   },
   {
     id: 2,
-    title: 'TOEIC Certification',
+    title: 'TOEIC Listening & Reading',
     image: '/assets/certificate/sertifikat_toeic_enrio.svg',
     description:
       'Achieved a TOEIC score of 580, demonstrating proficiency in English for professional and academic purposes. The TOEIC test assesses listening and reading skills, which are essential for effective communication in a global work environment.',
