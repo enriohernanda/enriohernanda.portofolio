@@ -8,13 +8,13 @@ export default function Experience() {
     {
       id: 1,
       logo: '/assets/experience/logo-ppkdjp.jpeg',
-      role: 'Web Programmer Trainee',
+      role: 'Junior Web Programmer',
       company: 'PPKD Jakarta Pusat',
       date: 'Oct 2025 - Dec 2025',
       responsibilities: [
-        'Learned both frontend and backend web development using HTML, CSS, JavaScript, React.js, Bootstrap, and PHP (Laravel Framework)',
-        'Utilized XAMPP for local server setup and phpMyAdmin for MySQL database management.',
-        'Built responsive web interfaces and data-driven applications as part of training projects.',
+        'Developed and built data-driven web applications , gaining experience in both frontend (React.js, Bootstrap) and backend (PHP with Laravel framework) development.',
+        'Successfully implemented responsive web interfaces while adhering to modern web design principles (HTML, CSS, JavaScript).',
+        'Managed the development environment using XAMPP and performed database operations (CRUD) utilizing MySQL via phpMyAdmin.',
       ],
     },
     {
@@ -24,13 +24,12 @@ export default function Experience() {
       company: 'Universitas YARSI',
       date: 'Mar 2025 - Aug 2025',
       responsibilities: [
-        'Designed UI/UX prototypes in Figma and implemented them into code',
-        'Developed the entire frontend using Next.js and Tailwind CSS',
+        'Designed UI/UX prototypes in Figma and implemented them into functional code',
+        'Successfully launched the MRICondyleNet application, developing the entire responsive frontend using Next.js and Tailwind CSS.',
         'Built a responsive interface for desktop, tablet, and smartphone',
-        'Implemented dark mode and light mode support',
-        'Integrated the frontend with backend API services',
-        'Managed version control and team collaboration using GitHub',
-        'Deployed and hosted the application on Vercel',
+        'Integrated the interface with backend RESTful API services to fetch and display data.',
+        'Implemented key features such as dark and light mode support and ensured cross-device compatibility.',
+        'Managed version control and team collaboration using GitHub, overseeing the deployment pipeline on Vercel.',
       ],
     },
     {
@@ -43,7 +42,7 @@ export default function Experience() {
         'Collaborated with a development team to build and test features for a React-based web application',
         'Designed UI/UX prototypes in Figma and implemented them into code',
         'Developed a responsive interface optimized for desktop, tablet, and mobile devices',
-        'Managed version control and team collaboration using GitHub',
+        'Maintained code integrity and facilitated team collaboration through the efficient use of Git and GitHub for version control.',
       ],
     },
   ];
