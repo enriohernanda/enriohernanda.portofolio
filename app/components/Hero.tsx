@@ -39,7 +39,7 @@ export default function Hero() {
           <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="flex flex-1 flex-col justify-center gap-4 text-left self-stretch">
             <div className="space-y-2">
               <h1 className="text-3xl md:text-5xl font-bold">Hi, I’m Enrio Hernanda</h1>
-              <p className="text-lg md:text-xl text-[#4B5563] dark:text-[#D1D5DB]">Frontend Developer | React.js | Next.js</p>
+              <p className="text-lg md:text-xl text-[#4B5563] dark:text-[#D1D5DB]">Web Developer | React.js | Next.js | Laravel</p>
             </div>
 
             {/* Location + Status */}
