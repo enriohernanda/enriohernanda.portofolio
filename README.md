@@ -20,14 +20,3 @@ This is my personal portfolio website, built with **Next.js**, **Tailwind CSS**,
 - [Figma](https://www.figma.com/design/Cb2svTQVZYKo8IwQMkXY7G/Portofolio---Enrio-Hernanda?node-id=0-1&p=f&t=Qeze7g0KFDLgdzG9-0) - Web Design
 
 ---
-
-
-## Installing and Running Locally
-
-Clone repository:
-
-```bash
-git clone (https://github.com/enriohernanda/enriohernanda.portofolio.git)
-cd portofolio-enrio
-npm install
-npm run dev
