@@ -31,24 +31,24 @@ const projects = [
     tags: ['Next.js', 'React.js', 'Typescript', 'Tailwindcss', 'Framer Motion', 'Figma', 'GitHub'],
     link: 'https://github.com/enriohernanda/Frontend-MRICondyleNet',
   },
-  {
-    id: 4,
-    title: 'MopArt',
-    image: '/assets/projects/project-mopart.svg',
-    description:
-      'MopArt is an innovative website designed with the aim of introducing and promoting painting to the public. This website was created in a group with 6 members consisting of 1 hustler, 3 hipsters and 2 hackers. When creating this website, I served as a hacker who handled the entire frontend of the website.',
-    tags: ['React.js', 'HTML', 'CSS', 'Javascript', 'Bootstrap', 'Figma', 'GitHub'],
-    link: 'https://github.com/enriohernanda/Project-Massive_Compro-Developers',
-  },
-  {
-    id: 5,
-    title: 'Bersama Zakat',
-    image: '/assets/projects/project-berkat.svg',
-    description:
-      'Bersama Zakat is an Android app that teaches you about zakat, how to calculate it, and its benefits. It also helps you pay zakat according to Islamic law. You can learn about various types of zakat, such as zakat on gold, zakat on fitrah, zakat on professions, zakat on agriculture, zakat on livestock, and zakat on fisheries. The app also provides information on zakat law from various perspectives.',
-    tags: ['Kotlin', 'Figma', 'GitHub'],
-    link: 'https://github.com/Ardiansputrraa/Bersama-Zakat-App',
-  },
+  // {
+  //   id: 4,
+  //   title: 'MopArt',
+  //   image: '/assets/projects/project-mopart.svg',
+  //   description:
+  //     'MopArt is an innovative website designed with the aim of introducing and promoting painting to the public. This website was created in a group with 6 members consisting of 1 hustler, 3 hipsters and 2 hackers. When creating this website, I served as a hacker who handled the entire frontend of the website.',
+  //   tags: ['React.js', 'HTML', 'CSS', 'Javascript', 'Bootstrap', 'Figma', 'GitHub'],
+  //   link: 'https://github.com/enriohernanda/Project-Massive_Compro-Developers',
+  // },
+  // {
+  //   id: 5,
+  //   title: 'Bersama Zakat',
+  //   image: '/assets/projects/project-berkat.svg',
+  //   description:
+  //     'Bersama Zakat is an Android app that teaches you about zakat, how to calculate it, and its benefits. It also helps you pay zakat according to Islamic law. You can learn about various types of zakat, such as zakat on gold, zakat on fitrah, zakat on professions, zakat on agriculture, zakat on livestock, and zakat on fisheries. The app also provides information on zakat law from various perspectives.',
+  //   tags: ['Kotlin', 'Figma', 'GitHub'],
+  //   link: 'https://github.com/Ardiansputrraa/Bersama-Zakat-App',
+  // },
 ];
 
 export default function Projects() {
