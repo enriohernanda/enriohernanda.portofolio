@@ -6,6 +6,15 @@ import Container from './layout/Container';
 const certificate = [
   {
     id: 1,
+    title: 'Junior Web Programmer',
+    image: '/assets/certificate/sertifikat_bnsp_enrio.svg',
+    description:
+      'Certified as a Junior Web Programmer by the Badan Nasional Sertifikasi Profesi (BNSP) after successfully passing the competency test. This certification validates skills in web programming, including front-end and back-end development, database management, and web application deployment.',
+    credential: 'Credential ID ICT 2121 14028 2025',
+    date: 'Dec 2025',
+  },
+  {
+    id: 2,
     title: 'Web Programming Training',
     image: '/assets/certificate/sertifikat_ppkd_enrio.svg',
     description:
@@ -14,7 +23,7 @@ const certificate = [
     date: 'Nov 2025',
   },
   {
-    id: 2,
+    id: 3,
     title: 'TOEIC Listening & Reading',
     image: '/assets/certificate/sertifikat_toeic_enrio.svg',
     description:
@@ -23,7 +32,7 @@ const certificate = [
     date: 'Jun 2025',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Web Development & UI/UX Design',
     image: '/assets/certificate/sertifikat_msib_enrio.svg',
     description:
@@ -32,7 +41,7 @@ const certificate = [
     date: 'Jun 2024',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Web Development & UI/UX Design',
     image: '/assets/certificate/sertifikat_celerates_enrio.svg',
     description:
@@ -41,7 +50,7 @@ const certificate = [
     date: 'Jun 2024',
   },
   {
-    id: 5,
+    id: 6,
     title: 'YARSI Informatics Engineering Specialization Track Exhibition',
     image: '/assets/certificate/sertifikat_informatics_engineering_specialization_track_exhibition.svg',
     description:
