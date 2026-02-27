@@ -6,21 +6,20 @@ import Container from './layout/Container';
 const projects = [
   {
     id: 1,
+    title: 'MOVFLIX',
+    image: '/assets/projects/project-movflix.svg',
+    description: 'Movie streaming UI inspired by Netflix. Built using React, Vite & TMDB API. Features include movie listing, search, and detail pages. Deployed on Vercel.',
+    tags: ['React.js + Vite', 'Javascript', 'HTML', 'Tailwindcss', 'GitHub', 'TMDB API', 'Vercel Deployment'],
+    link: 'https://github.com/enriohernanda/MOVFLIX',
+  },
+  {
+    id: 2,
     title: 'Mini Shop e-commerce',
     image: '/assets/projects/project-minishop.svg',
     description:
       'Built a responsive mini e-commerce frontend using Next.js, React, and Tailwind CSS. Features include product listing with search & filter, product detail page, cart management with localStorage, and checkout functionality. Demonstrates API integration, state management, and responsive UI design.',
     tags: ['Next.js', 'React.js', 'Typescript', 'Tailwindcss', 'Framer Motion', 'GitHub'],
     link: 'https://github.com/enriohernanda/mini-shop-ecommerce',
-  },
-  {
-    id: 2,
-    title: 'NextVision Landing Page',
-    image: '/assets/projects/project-nextvision.svg',
-    description:
-      'NextVision is a web platform built with Next.js and Tailwind CSS. This website features a modern landing page with interactive animations using Framer Motion. It includes sections like Hero, Features, Testimonials, and Contact, all designed to be fully responsive and visually appealing across devices.',
-    tags: ['Next.js', 'React.js', 'Typescript', 'Tailwindcss', 'Framer Motion', 'GitHub'],
-    link: 'https://github.com/enriohernanda/Landing-Page-NextVision',
   },
   {
     id: 3,
