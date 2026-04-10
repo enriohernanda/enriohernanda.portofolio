@@ -5,12 +5,6 @@ This is my personal portfolio website, built with **Next.js**, **Tailwind CSS**,
 
 ---
 
-## Preview
-
-<img width="3220" height="2333" alt="Group 1" src="https://github.com/user-attachments/assets/cbc20bd6-eb51-4fc9-b8c0-b00334ea1657" />
-
-
-
 ## Tech Stack
 
 - [Next.js 15](https://nextjs.org/) – React Framework
