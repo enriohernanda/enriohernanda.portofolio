@@ -82,7 +82,7 @@ export default function Certificate() {
   };
 
   return (
-    <section id="certificate" className="w-full py-24 relative overflow-hidden bg-white dark:bg-[#030712] transition-colors duration-300">
+    <section id="certificate" className="w-full py-24 relative overflow-hidden bg-[#030712] transition-colors duration-300">
       <Container>
          {/* Heading */}
          <div className="flex flex-col items-center mb-16 px-4">
@@ -90,7 +90,7 @@ export default function Certificate() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-sm font-bold tracking-widest uppercase text-indigo-600 dark:text-indigo-400 mb-4 px-4 py-1 bg-indigo-50 dark:bg-indigo-900/30 rounded-full"
+            className="text-sm font-bold tracking-widest uppercase text-indigo-400 mb-4 px-4 py-1 bg-indigo-900/30 rounded-full"
           >
             Achievements
           </motion.h3>
@@ -98,7 +98,7 @@ export default function Certificate() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-6 text-center"
+            className="text-3xl md:text-4xl font-extrabold text-white mb-6 text-center"
           >
             Licenses & Certifications
           </motion.h2>
@@ -122,7 +122,7 @@ export default function Certificate() {
               className="absolute inset-0 flex flex-col md:flex-row items-center gap-8 glass-card p-6 md:p-10 rounded-[2.5rem]"
             >
               {/* Image Side */}
-              <div className="flex-1 w-full h-full relative group overflow-hidden rounded-2xl shadow-lg border border-slate-200/50 dark:border-slate-700/50">
+              <div className="flex-1 w-full h-full relative group overflow-hidden rounded-2xl shadow-lg border border-slate-700/50">
                   <Image 
                     src={certificates[currentIndex].image} 
                     alt={certificates[currentIndex].title} 
@@ -135,22 +135,22 @@ export default function Certificate() {
               {/* Text Side */}
               <div className="flex-1 space-y-6 flex flex-col justify-center">
                 <div className="space-y-2">
-                  <span className="text-sm font-bold text-indigo-600 dark:text-indigo-400">
+                  <span className="text-sm font-bold text-indigo-400">
                     {certificates[currentIndex].date}
                   </span>
-                  <h4 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">
+                  <h4 className="text-2xl md:text-3xl font-black tracking-tight text-white leading-tight">
                     {certificates[currentIndex].title}
                   </h4>
                 </div>
                 
-                <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p className="text-lg text-slate-400 leading-relaxed">
                   {certificates[currentIndex].description}
                 </p>
 
                 {certificates[currentIndex].credential && (
-                  <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700">
-                    <p className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">Credential ID</p>
-                    <p className="text-sm font-mono text-slate-700 dark:text-slate-300">
+                  <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700">
+                    <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Credential ID</p>
+                    <p className="text-sm font-mono text-slate-300">
                       {certificates[currentIndex].credential}
                     </p>
                   </div>
@@ -163,7 +163,7 @@ export default function Certificate() {
           <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 flex items-center gap-8">
             <button 
               onClick={() => paginate(-1)}
-              className="p-4 rounded-2xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-xl hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 transition-all active:scale-90"
+              className="p-4 rounded-2xl bg-slate-800 text-white shadow-xl hover:bg-indigo-600 hover:text-white transition-all active:scale-90"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -173,19 +173,19 @@ export default function Certificate() {
             <div className="flex gap-2">
               {certificates.map((_, i) => (
                 <button 
-                  key={i} 
-                  onClick={() => {
-                    setDirection(i > currentIndex ? 1 : -1);
-                    setCurrentIndex(i);
-                  }}
-                  className={`h-2 rounded-full transition-all duration-500 ${i === currentIndex ? 'w-8 bg-indigo-600' : 'w-2 bg-slate-300 dark:bg-slate-700'}`}
+                   key={i} 
+                   onClick={() => {
+                     setDirection(i > currentIndex ? 1 : -1);
+                     setCurrentIndex(i);
+                   }}
+                   className={`h-2 rounded-full transition-all duration-500 ${i === currentIndex ? 'w-8 bg-indigo-600' : 'w-2 bg-slate-700'}`}
                 />
               ))}
             </div>
 
             <button 
               onClick={() => paginate(1)}
-              className="p-4 rounded-2xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-xl hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 transition-all active:scale-90"
+              className="p-4 rounded-2xl bg-slate-800 text-white shadow-xl hover:bg-indigo-600 hover:text-white transition-all active:scale-90"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

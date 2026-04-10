@@ -33,7 +33,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="w-full py-24 bg-slate-50/50 dark:bg-slate-900/20 transition-colors duration-300">
+    <section id="projects" className="w-full py-24 bg-[#030712] transition-colors duration-300">
       <Container>
         {/* Heading */}
          <div className="flex flex-col items-center mb-16">
@@ -41,7 +41,7 @@ export default function Projects() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-sm font-bold tracking-widest uppercase text-indigo-600 dark:text-indigo-400 mb-4 px-4 py-1 bg-indigo-50 dark:bg-indigo-900/30 rounded-full"
+            className="text-sm font-bold tracking-widest uppercase text-indigo-400 mb-4 px-4 py-1 bg-indigo-900/30 rounded-full"
           >
             Portfolio
           </motion.h3>
@@ -49,7 +49,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-6 text-center"
+            className="text-3xl md:text-4xl font-extrabold text-white mb-6 text-center"
           >
             Featured Projects
           </motion.h2>
@@ -89,10 +89,10 @@ export default function Projects() {
                  `}
               >
                 <div className="space-y-4">
-                  <h4 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                  <h4 className="text-2xl md:text-3xl font-bold text-white group-hover:text-indigo-400 transition-colors">
                     {project.title}
                   </h4>
-                  <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl">
+                  <p className="text-lg text-slate-400 leading-relaxed max-w-xl">
                     {project.description}
                   </p>
                 </div>
@@ -100,7 +100,7 @@ export default function Projects() {
                 {/* Tags */}
                 <div className={`flex flex-wrap gap-2 ${index % 2 === 1 ? 'lg:justify-end' : 'lg:justify-start'}`}>
                   {project.tags.map((tag, i) => (
-                    <span key={i} className="text-xs font-bold px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <span key={i} className="text-xs font-bold px-3 py-1.5 rounded-lg bg-slate-800 text-indigo-400 border border-slate-700 shadow-sm">
                       {tag}
                     </span>
                   ))}
@@ -113,11 +113,11 @@ export default function Projects() {
                   rel="noopener noreferrer" 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold shadow-lg hover:shadow-indigo-500/25 transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-slate-900 font-bold shadow-lg hover:shadow-indigo-500/25 transition-all"
                 >
                   <span className="text-sm">View Implementation</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a22 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a22 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </motion.a>
               </div>

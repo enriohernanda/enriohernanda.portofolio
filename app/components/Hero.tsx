@@ -5,24 +5,6 @@ import { motion } from 'framer-motion';
 import Container from './layout/Container';
 
 export default function Hero() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-
-  useEffect(() => {
-    const observer = new MutationObserver(() => {
-      if (document.documentElement.classList.contains('dark')) {
-        setTheme('dark');
-      } else {
-        setTheme('light');
-      }
-    });
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class'],
-    });
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section id="hero" className="min-h-screen flex items-center py-20 relative overflow-hidden">
@@ -64,31 +46,31 @@ export default function Hero() {
             </div>
 
             {/* Location */}
-            <div className="flex flex-wrap gap-6 text-slate-600 dark:text-slate-400">
+            <div className="flex flex-wrap gap-6 text-slate-400">
                <motion.div 
                 initial={{ opacity: 0, y: 10 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ delay: 0.4 }} 
                 className="flex items-center gap-2"
               >
-                <div className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800">
-                   <Image src={theme === 'light' ? '/assets/icon/icon-locationLight.svg' : '/assets/icon/icon-locationDark.svg'} alt="Location" width={20} height={20} />
+                <div className="p-2 rounded-lg bg-slate-800">
+                   <Image src="/assets/icon/icon-locationDark.svg" alt="Location" width={20} height={20} />
                 </div>
-                <span className="font-medium">Jakarta, Indonesia</span>
+                <span className="font-medium text-slate-400">Jakarta, Indonesia</span>
               </motion.div>
             </div>
 
             {/* Social Media & CTA */}
             <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
               <div className="flex gap-4 p-2 rounded-2xl glass-card">
-                <a className="p-2 hover:bg-white dark:hover:bg-white/10 rounded-xl transition-all hover:scale-110 active:scale-95 shadow-sm" href="https://www.linkedin.com/in/enriohernanda" target="_blank" rel="noopener noreferrer">
-                  <Image src={theme === 'light' ? '/assets/icon/icon-linkedinLight.svg' : '/assets/icon/icon-linkedinDark.svg'} alt="LinkedIn" width={24} height={24} />
+                <a className="p-2 hover:bg-white/10 rounded-xl transition-all hover:scale-110 active:scale-95 shadow-sm" href="https://www.linkedin.com/in/enriohernanda" target="_blank" rel="noopener noreferrer">
+                  <Image src="/assets/icon/icon-linkedinDark.svg" alt="LinkedIn" width={24} height={24} />
                 </a>
-                <a className="p-2 hover:bg-white dark:hover:bg-white/10 rounded-xl transition-all hover:scale-110 active:scale-95 shadow-sm" href="https://github.com/enriohernanda" target="_blank" rel="noopener noreferrer">
-                  <Image src={theme === 'light' ? '/assets/icon/icon-githubLight.svg' : '/assets/icon/icon-githubDark.svg'} alt="GitHub" width={24} height={24} />
+                <a className="p-2 hover:bg-white/10 rounded-xl transition-all hover:scale-110 active:scale-95 shadow-sm" href="https://github.com/enriohernanda" target="_blank" rel="noopener noreferrer">
+                  <Image src="/assets/icon/icon-githubDark.svg" alt="GitHub" width={24} height={24} />
                 </a>
-                <a className="p-2 hover:bg-white dark:hover:bg-white/10 rounded-xl transition-all hover:scale-110 active:scale-95 shadow-sm" href="https://instagram.com/enriohernandaa" target="_blank" rel="noopener noreferrer">
-                  <Image src={theme === 'light' ? '/assets/icon/icon-instagramLight.svg' : '/assets/icon/icon-instagramDark.svg'} alt="Instagram" width={24} height={24} />
+                <a className="p-2 hover:bg-white/10 rounded-xl transition-all hover:scale-110 active:scale-95 shadow-sm" href="https://instagram.com/enriohernandaa" target="_blank" rel="noopener noreferrer">
+                  <Image src="/assets/icon/icon-instagramDark.svg" alt="Instagram" width={24} height={24} />
                 </a>
               </div>
             </div>
@@ -107,14 +89,14 @@ export default function Hero() {
               className="relative h-[320px] w-[300px] md:h-[420px] md:w-[380px]"
             >
               {/* Decorative elements behind photo */}
-              <div className="absolute inset-0 bg-indigo-600 dark:bg-indigo-500 rounded-3xl rotate-6 -z-10 opacity-20 blur-sm" />
-              <div className="absolute inset-0 border-2 border-indigo-600/30 dark:border-indigo-400/30 rounded-3xl -rotate-3 -z-10 transition-transform duration-500 group-hover:rotate-0" />
+              <div className="absolute inset-0 bg-indigo-500 rounded-3xl rotate-6 -z-10 opacity-20 blur-sm" />
+              <div className="absolute inset-0 border-2 border-indigo-400/30 rounded-3xl -rotate-3 -z-10 transition-transform duration-500 group-hover:rotate-0" />
               
               <Image 
                 src="/assets/enrio.svg" 
                 alt="Enrio" 
                 fill 
-                className="object-cover rounded-3xl shadow-2xl border-4 border-white dark:border-slate-800 z-10" 
+                className="object-cover rounded-3xl shadow-2xl border-4 border-slate-800 z-10" 
                 priority 
               />
             </motion.div>

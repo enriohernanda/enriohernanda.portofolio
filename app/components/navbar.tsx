@@ -1,7 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import ThemeToggle from './ThemeToggle';
+import { motion } from 'framer-motion';
 import MobileMenu from './MobileMenu';
 import Container from './layout/Container';
 
@@ -33,7 +32,7 @@ export default function Navbar() {
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled 
-            ? 'py-3 bg-white/70 dark:bg-[#030712]/70 backdrop-blur-xl border-b border-white/20 dark:border-white/5 shadow-2xl shadow-indigo-500/5' 
+            ? 'py-3 bg-[#030712]/70 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-indigo-500/5' 
             : 'py-6 bg-transparent'
         }`}
       >
@@ -43,7 +42,7 @@ export default function Navbar() {
               href="#hero"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-2xl font-black tracking-tighter text-slate-900 dark:text-white group"
+              className="text-2xl font-black tracking-tighter text-white group"
             >
               ENRIO<span className="text-indigo-600 group-hover:animate-pulse">.</span>
             </motion.a>
@@ -60,7 +59,7 @@ export default function Navbar() {
                   >
                     <a 
                       href={link.href} 
-                      className="text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-white transition-colors relative group"
+                      className="text-sm font-bold text-slate-400 hover:text-white transition-colors relative group"
                     >
                       {link.name}
                       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 transition-all group-hover:w-full" />
@@ -69,16 +68,15 @@ export default function Navbar() {
                 ))}
               </ul>
 
-              <div className="h-6 w-[1px] bg-slate-200 dark:bg-slate-800" />
+              <div className="h-6 w-[1px] bg-slate-800" />
 
               <div className="flex items-center gap-4">
-                <ThemeToggle />
                 <motion.a 
                   href="/cv/CV_Enrio_Hernanda.pdf" 
                   download="CV_Enrio_Hernanda.pdf"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold shadow-lg hover:shadow-indigo-500/20 transition-all"
+                  className="px-5 py-2.5 rounded-xl bg-white text-slate-900 text-sm font-bold shadow-lg hover:shadow-indigo-500/20 transition-all"
                 >
                   Resume
                 </motion.a>
@@ -88,7 +86,7 @@ export default function Navbar() {
             {/* Mobile Toggle */}
             <motion.button
               onClick={() => setIsOpen(true)}
-              className="lg:hidden p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white"
+              className="lg:hidden p-2.5 rounded-xl bg-slate-800 text-white"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />

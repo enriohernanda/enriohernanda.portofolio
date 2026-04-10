@@ -33,7 +33,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="w-full py-24 bg-slate-50/50 dark:bg-slate-900/10 transition-colors duration-300">
+    <section id="experience" className="w-full py-24 bg-[#030712] transition-colors duration-300">
       <Container>
          {/* Heading */}
          <div className="flex flex-col items-center mb-16 px-4">
@@ -41,7 +41,7 @@ export default function Experience() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-sm font-bold tracking-widest uppercase text-indigo-600 dark:text-indigo-400 mb-4 px-4 py-1 bg-indigo-50 dark:bg-indigo-900/30 rounded-full"
+            className="text-sm font-bold tracking-widest uppercase text-indigo-400 mb-4 px-4 py-1 bg-indigo-900/30 rounded-full"
           >
             My Path
           </motion.h3>
@@ -49,7 +49,7 @@ export default function Experience() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-6 text-center"
+            className="text-3xl md:text-4xl font-extrabold text-white mb-6 text-center"
           >
             Professional Experience
           </motion.h2>
@@ -67,27 +67,27 @@ export default function Experience() {
               className="glass-card flex flex-col md:flex-row md:items-start gap-8 p-8 rounded-3xl hover:border-indigo-500/30 transition-all group"
             >
               {/* Logo */}
-              <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 bg-white dark:bg-slate-800 rounded-2xl p-2 shadow-inner border border-slate-100 dark:border-slate-700">
+              <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 bg-slate-800 rounded-2xl p-2 shadow-inner border border-slate-700">
                 <Image src={exp.logo} alt={exp.role} width={60} height={60} className="object-contain" />
               </div>
 
               {/* Content */}
               <div className="flex-1 space-y-4">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2">
-                  <h4 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                  <h4 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
                     {exp.role}
                   </h4>
-                  <span className="text-sm font-bold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
+                  <span className="text-sm font-bold px-3 py-1 rounded-full bg-slate-800 text-slate-400">
                     {exp.date}
                   </span>
                 </div>
-                <p className="text-indigo-600 dark:text-indigo-400 font-bold tracking-wide uppercase text-xs">
-                  {exp.company}
+                <p className="text-indigo-400 font-bold tracking-wide uppercase text-xs">
+                   {exp.company}
                 </p>
                 {exp.responsibilities.length > 0 && (
                   <ul className="space-y-3">
                     {exp.responsibilities.map((task, i) => (
-                      <li key={i} className="flex gap-3 text-slate-600 dark:text-slate-400 leading-relaxed">
+                      <li key={i} className="flex gap-3 text-slate-400 leading-relaxed">
                         <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0" />
                         <span className="text-base">{task}</span>
                       </li>
