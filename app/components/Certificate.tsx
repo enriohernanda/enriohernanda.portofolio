@@ -1,16 +1,17 @@
 'use client';
+import { useState } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Container from './layout/Container';
 
-const certificate = [
+const certificates = [
   {
     id: 1,
     title: 'Junior Web Programmer',
     image: '/assets/certificate/sertifikat_bnsp_enrio.svg',
     description:
-      'Certified as a Junior Web Programmer by the Badan Nasional Sertifikasi Profesi (BNSP) after successfully passing the competency test. This certification validates skills in web programming, including front-end and back-end development, database management, and web application deployment.',
-    credential: 'Credential ID ICT 2121 14028 2025',
+      'Certified as a Junior Web Programmer by the Badan Nasional Sertifikasi Profesi (BNSP). This certification validates skills in web programming, including front-end and back-end development, and database management.',
+    credential: 'ICT 2121 14028 2025',
     date: 'Dec 2025',
   },
   {
@@ -18,8 +19,8 @@ const certificate = [
     title: 'Web Programming Training',
     image: '/assets/certificate/sertifikat_ppkd_enrio.svg',
     description:
-      'Has participated in the Web Programming Work Skills Training Batch IV (Four) held by Pusat Pelatihan Kerja Daerah Jakarta Pusat from October 1 to November 28, 2025. This training focuses on developing skills in web programming, including front-end and back-end development, to enhance employability in the IT sector.',
-    credential: 'Credential ID T2.57.WPR.KT.02.03.2505866',
+      'Intensive Web Programming training focusing on modern development stacks to enhance employability in the IT sector.',
+    credential: 'ID T2.57.WPR.KT.02.03.2505866',
     date: 'Nov 2025',
   },
   {
@@ -27,88 +28,170 @@ const certificate = [
     title: 'TOEIC Listening & Reading',
     image: '/assets/certificate/sertifikat_toeic_enrio.svg',
     description:
-      'Achieved a TOEIC score of 580, demonstrating proficiency in English for professional and academic purposes. The TOEIC test assesses listening and reading skills, which are essential for effective communication in a global work environment.',
+      'Achieved a TOEIC score of 580, demonstrating proficiency in English for professional and academic environments.',
     credential: '',
     date: 'Jun 2025',
   },
   {
     id: 4,
-    title: 'Web Development & UI/UX Design',
+    title: 'MSIB Web Development',
     image: '/assets/certificate/sertifikat_msib_enrio.svg',
     description:
-      'Successfully completed the Independent Study program under the Kampus Merdeka initiative, focusing on Web Development and UI/UX Design. Learned and applied skills in digital creative, data, cybersecurity, and artificial intelligence through hands-on projects.',
-    credential: 'Credential ID 9079841',
+      'Kampus Merdeka initiative focusing on Web Development and UI/UX Design with hands-on project experience.',
+    credential: '9079841',
     date: 'Jun 2024',
   },
   {
     id: 5,
-    title: 'Web Development & UI/UX Design',
-    image: '/assets/certificate/sertifikat_celerates_enrio.svg',
-    description:
-      'Successfully completed the Independent Study program under the Kampus Merdeka initiative, focusing on Web Development and UI/UX Design. Learned and applied skills in digital creative, data, cybersecurity, and artificial intelligence through hands-on projects.',
-    credential: 'Credential ID 9079841',
-    date: 'Jun 2024',
-  },
-  {
-    id: 6,
-    title: 'YARSI Informatics Engineering Specialization Track Exhibition',
+    title: 'Informatics Specialization Exhibition',
     image: '/assets/certificate/sertifikat_informatics_engineering_specialization_track_exhibition.svg',
     description:
-      'Completed an Android Developer assignment in the Mobile Development study program at YARSI University. Presented the Bersama Zakat project at the Informatics Engineering Specialization Track Exhibition organized by YARSI University on March 21, 2024.',
-    credential: 'Credential ID 0021/TI/SRK-PP.20.05/III/2024',
+      'Presented the Bersama Zakat project at the Informatics Engineering Specialization Track Exhibition organized by YARSI University.',
+    credential: '0021/TI/SRK-PP.20.05/III/2024',
     date: 'Mar 2024',
   },
 ];
 
 export default function Certificate() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+
+  const slideVariants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? 500 : -500,
+      opacity: 0,
+      scale: 0.9,
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+      scale: 1,
+    },
+    exit: (direction: number) => ({
+      zIndex: 0,
+      x: direction < 0 ? 500 : -500,
+      opacity: 0,
+      scale: 0.9,
+    }),
+  };
+
+  const paginate = (newDirection: number) => {
+    setDirection(newDirection);
+    setCurrentIndex((prev) => (prev + newDirection + certificates.length) % certificates.length);
+  };
+
   return (
-    <section id="certificate" className="w-full py-20 bg-[#F9FAFB] dark:bg-[#111827] transition-colors duration-300">
+    <section id="certificate" className="w-full py-24 relative overflow-hidden bg-white dark:bg-[#030712] transition-colors duration-300">
       <Container>
-        {/* Heading */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="flex justify-center mb-6">
-          <h3 className="text-[#4B5563] dark:text-[#D1D5DB] rounded-3xl py-1 px-4 bg-[#E5E7EB] dark:bg-[#374151]">Licenses & Certifications</h3>
-        </motion.div>
+         {/* Heading */}
+         <div className="flex flex-col items-center mb-16 px-4">
+          <motion.h3 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="text-sm font-bold tracking-widest uppercase text-indigo-600 dark:text-indigo-400 mb-4 px-4 py-1 bg-indigo-50 dark:bg-indigo-900/30 rounded-full"
+          >
+            Achievements
+          </motion.h3>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-6 text-center"
+          >
+            Licenses & Certifications
+          </motion.h2>
+        </div>
 
-        {/* Subheading */}
-        <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} viewport={{ once: true }} className="text-center text-[#4B5563] dark:text-[#D1D5DB] mb-10 text-lg">
-          The following are the Licenses & Certifications that I have obtained:
-        </motion.p>
-
-        {/* certificate List */}
-        <div className="flex flex-col gap-12">
-          {certificate.map((project, index) => (
+        {/* Carousel Container */}
+        <div className="relative max-w-5xl mx-auto h-[700px] md:h-[500px]">
+          <AnimatePresence initial={false} custom={direction}>
             <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="flex flex-col md:flex-row items-stretch rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm"
+              key={currentIndex}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+                scale: { duration: 0.4 }
+              }}
+              className="absolute inset-0 flex flex-col md:flex-row items-center gap-8 glass-card p-6 md:p-10 rounded-[2.5rem]"
             >
-              {/* Bagian Image */}
-              <div
-                className={`flex-1 w-full md:w-1/2 flex justify-center items-center px-3 py-5
-                    bg-white dark:bg-[#374151]
-                    ${index % 2 === 1 ? 'md:order-2' : 'md:order-1'}
-                `}
-              >
-                <Image src={project.image} alt={project.title} width={600} height={400} className="w-auto h-auto rounded-lg shadow-sm object-cover" />
+              {/* Image Side */}
+              <div className="flex-1 w-full h-full relative group overflow-hidden rounded-2xl shadow-lg border border-slate-200/50 dark:border-slate-700/50">
+                  <Image 
+                    src={certificates[currentIndex].image} 
+                    alt={certificates[currentIndex].title} 
+                    fill
+                    className="object-contain bg-white p-4 group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-indigo-600/5 group-hover:bg-indigo-600/0 transition-colors" />
               </div>
 
-              {/* Bagian Content */}
-              <div
-                className={`flex-1 w-full md:w-1/2 p-6 flex flex-col justify-center
-                bg-[#F9FAFB] dark:bg-[#1F2937]
-                ${index % 2 === 1 ? 'md:order-1' : 'md:order-2'}
-                 `}
-              >
-                <h4 className="text-xl font-semibold text-black dark:text-white">{project.title}</h4>
-                <p className="mt-2 text-[#4B5563] dark:text-[#D1D5DB] leading-relaxed">{project.description}</p>
-                <p className="mt-2 text-[#4B5563] dark:text-[#D1D5DB] leading-relaxed">{project.credential}</p>
-                <p className="mt-2 text-[#4B5563] dark:text-[#D1D5DB] leading-relaxed">{project.date}</p>
+              {/* Text Side */}
+              <div className="flex-1 space-y-6 flex flex-col justify-center">
+                <div className="space-y-2">
+                  <span className="text-sm font-bold text-indigo-600 dark:text-indigo-400">
+                    {certificates[currentIndex].date}
+                  </span>
+                  <h4 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">
+                    {certificates[currentIndex].title}
+                  </h4>
+                </div>
+                
+                <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                  {certificates[currentIndex].description}
+                </p>
+
+                {certificates[currentIndex].credential && (
+                  <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700">
+                    <p className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">Credential ID</p>
+                    <p className="text-sm font-mono text-slate-700 dark:text-slate-300">
+                      {certificates[currentIndex].credential}
+                    </p>
+                  </div>
+                )}
               </div>
             </motion.div>
-          ))}
+          </AnimatePresence>
+
+          {/* Navigation Controls */}
+          <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 flex items-center gap-8">
+            <button 
+              onClick={() => paginate(-1)}
+              className="p-4 rounded-2xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-xl hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 transition-all active:scale-90"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <div className="flex gap-2">
+              {certificates.map((_, i) => (
+                <button 
+                  key={i} 
+                  onClick={() => {
+                    setDirection(i > currentIndex ? 1 : -1);
+                    setCurrentIndex(i);
+                  }}
+                  className={`h-2 rounded-full transition-all duration-500 ${i === currentIndex ? 'w-8 bg-indigo-600' : 'w-2 bg-slate-300 dark:bg-slate-700'}`}
+                />
+              ))}
+            </div>
+
+            <button 
+              onClick={() => paginate(1)}
+              className="p-4 rounded-2xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-xl hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 transition-all active:scale-90"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </div>
       </Container>
     </section>

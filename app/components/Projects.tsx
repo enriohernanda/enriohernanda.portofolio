@@ -6,111 +6,120 @@ import Container from './layout/Container';
 const projects = [
   {
     id: 1,
-    title: 'MOVFLIX',
-    image: '/assets/projects/project-movflix.svg',
-    description: 'Movie streaming UI inspired by Netflix. Built using React, Vite & TMDB API. Features include movie listing, search, and detail pages. Deployed on Vercel.',
-    tags: ['React.js + Vite', 'Javascript', 'HTML', 'Tailwindcss', 'GitHub', 'TMDB API', 'Vercel Deployment'],
-    link: 'https://github.com/enriohernanda/MOVFLIX',
+    title: 'ZakatApp',
+    image: '/assets/projects/project-zakatapp.svg',
+    description: 'A modern zakat management solution helping users calculate and monitor their contributions with precision and ease.',
+    tags: ['Next.js 16', 'React19', 'TypeScript', 'Prisma ORM', 'TailwindCSS', 'Shadcn UI', 'Next.js API Routes', 'SQLite', 'NextAuth.js', 'JWT', 'bcrypt', 'React Hook Form', 'Zod', 'Recharts', 'Vercel'],
+    link: 'https://github.com/enriohernanda/Zakat-App',
   },
   {
     id: 2,
-    title: 'Mini Shop e-commerce',
-    image: '/assets/projects/project-minishop.svg',
-    description:
-      'Built a responsive mini e-commerce frontend using Next.js, React, and Tailwind CSS. Features include product listing with search & filter, product detail page, cart management with localStorage, and checkout functionality. Demonstrates API integration, state management, and responsive UI design.',
-    tags: ['Next.js', 'React.js', 'Typescript', 'Tailwindcss', 'Framer Motion', 'GitHub'],
-    link: 'https://github.com/enriohernanda/mini-shop-ecommerce',
+    title: 'MOVFLIX',
+    image: '/assets/projects/project-movflix.svg',
+    description: 'Premium streaming interface inspired by modern platforms. Seamless browsing with real-time movie data integration.',
+    tags: ['React', 'Vite', 'TMDB API', 'TailwindCSS', 'Vercel'],
+    link: 'https://github.com/enriohernanda/MOVFLIX',
   },
   {
     id: 3,
-    title: 'MRICondyleNet',
-    image: '/assets/projects/project-mricondylenet.svg',
+    title: 'Mini Shop E-commerce',
+    image: '/assets/projects/project-minishop.svg',
     description:
-      'MRICondyleNet is a web-based application for detecting Temporomandibular Joint (TMJ) conditions through MRI images with the help of an AI model. Built using Next.js and Tailwind CSS, the application allows users to upload images, view predictions, and manage data using a modern, interactive interface.',
-    tags: ['Next.js', 'React.js', 'Typescript', 'Tailwindcss', 'Framer Motion', 'Figma', 'GitHub'],
-    link: 'https://github.com/enriohernanda/Frontend-MRICondyleNet',
+      'Full-featured shopping experience with cart management, product filtering, and a sleek responsive checkout flow.',
+    tags: ['Next.js 13', 'TypeScript', 'Framer Motion', 'Local Storage', 'Vercel'],
+    link: 'https://github.com/enriohernanda/mini-shop-ecommerce',
   },
-  // {
-  //   id: 4,
-  //   title: 'MopArt',
-  //   image: '/assets/projects/project-mopart.svg',
-  //   description:
-  //     'MopArt is an innovative website designed with the aim of introducing and promoting painting to the public. This website was created in a group with 6 members consisting of 1 hustler, 3 hipsters and 2 hackers. When creating this website, I served as a hacker who handled the entire frontend of the website.',
-  //   tags: ['React.js', 'HTML', 'CSS', 'Javascript', 'Bootstrap', 'Figma', 'GitHub'],
-  //   link: 'https://github.com/enriohernanda/Project-Massive_Compro-Developers',
-  // },
-  // {
-  //   id: 5,
-  //   title: 'Bersama Zakat',
-  //   image: '/assets/projects/project-berkat.svg',
-  //   description:
-  //     'Bersama Zakat is an Android app that teaches you about zakat, how to calculate it, and its benefits. It also helps you pay zakat according to Islamic law. You can learn about various types of zakat, such as zakat on gold, zakat on fitrah, zakat on professions, zakat on agriculture, zakat on livestock, and zakat on fisheries. The app also provides information on zakat law from various perspectives.',
-  //   tags: ['Kotlin', 'Figma', 'GitHub'],
-  //   link: 'https://github.com/Ardiansputrraa/Bersama-Zakat-App',
-  // },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="w-full py-20 bg-white dark:bg-black transition-colors duration-300">
+    <section id="projects" className="w-full py-24 bg-slate-50/50 dark:bg-slate-900/20 transition-colors duration-300">
       <Container>
         {/* Heading */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="flex justify-center mb-6">
-          <h3 className="text-[#4B5563] dark:text-[#D1D5DB] rounded-3xl py-1 px-4 bg-[#E5E7EB] dark:bg-[#374151]">Projects</h3>
-        </motion.div>
-
-        {/* Subheading */}
-        <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} viewport={{ once: true }} className="text-center text-[#4B5563] dark:text-[#D1D5DB] mb-10 text-lg">
-          Some of the noteworthy projects I have built:
-        </motion.p>
+         <div className="flex flex-col items-center mb-16">
+          <motion.h3 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="text-sm font-bold tracking-widest uppercase text-indigo-600 dark:text-indigo-400 mb-4 px-4 py-1 bg-indigo-50 dark:bg-indigo-900/30 rounded-full"
+          >
+            Portfolio
+          </motion.h3>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-6 text-center"
+          >
+            Featured Projects
+          </motion.h2>
+        </div>
 
         {/* Projects List */}
-        <div className="flex flex-col gap-12">
+        <div className="space-y-16">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex flex-col md:flex-row items-stretch rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm"
+              className={`flex flex-col lg:flex-row gap-8 items-center group`}
             >
-              {/* Bagian Image */}
+              {/* Image Container */}
               <div
-                className={`flex-1 w-full md:w-1/2 flex justify-center items-center px-3 py-5
-                    bg-[#F9FAFB] dark:bg-[#374151]
-                    ${index % 2 === 1 ? 'md:order-2' : 'md:order-1'}
+                className={`flex-1 w-full relative overflow-hidden rounded-3xl group shadow-2xl
+                    ${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}
                 `}
               >
-                <Image src={project.image} alt={project.title} width={600} height={400} className="w-auto h-auto rounded-lg shadow-sm object-cover" />
+                <div className="absolute inset-0 bg-indigo-600/10 group-hover:bg-indigo-600/0 transition-colors duration-500 z-10" />
+                <Image 
+                  src={project.image} 
+                  alt={project.title} 
+                  width={800} 
+                  height={500} 
+                  className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
+                />
               </div>
 
-              {/* Bagian Content */}
+              {/* Content Container */}
               <div
-                className={`flex-1 w-full md:w-1/2 p-6 flex flex-col justify-center
-                bg-[#F9FAFB] dark:bg-[#111827]
-                ${index % 2 === 1 ? 'md:order-1' : 'md:order-2'}
+                className={`flex-1 w-full space-y-6 flex flex-col justify-center
+                ${index % 2 === 1 ? 'lg:order-1 lg:text-right lg:items-end' : 'lg:order-2 lg:text-left lg:items-start'}
                  `}
               >
-                <h4 className="text-xl font-semibold text-black dark:text-white">{project.title}</h4>
-                <p className="mt-2 text-[#4B5563] dark:text-[#D1D5DB] leading-relaxed">{project.description}</p>
+                <div className="space-y-4">
+                  <h4 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    {project.title}
+                  </h4>
+                  <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl">
+                    {project.description}
+                  </p>
+                </div>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mt-4">
+                <div className={`flex flex-wrap gap-2 ${index % 2 === 1 ? 'lg:justify-end' : 'lg:justify-start'}`}>
                   {project.tags.map((tag, i) => (
-                    <span key={i} className="text-sm px-3 py-1 rounded-full bg-[#E5E7EB] dark:bg-[#374151] text-[#4B5563] dark:text-[#D1D5DB]">
+                    <span key={i} className="text-xs font-bold px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-slate-200 dark:border-slate-700 shadow-sm">
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                {/* Button (Light & Dark) */}
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block mt-4">
-                  {/* Light mode */}
-                  <Image src="/assets/button/buttonProject-Light.svg" alt="View Project" width={40} height={40} className="block dark:hidden hover:scale-105 transition-transform" />
-                  {/* Dark mode */}
-                  <Image src="/assets/button/buttonProject-Dark.svg" alt="View Project" width={40} height={40} className="hidden dark:block hover:scale-105 transition-transform" />
-                </a>
+                {/* Button */}
+                <motion.a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold shadow-lg hover:shadow-indigo-500/25 transition-all"
+                >
+                  <span className="text-sm">View Implementation</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a22 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </motion.a>
               </div>
             </motion.div>
           ))}

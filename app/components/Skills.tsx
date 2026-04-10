@@ -14,6 +14,7 @@ const skills = [
   { name: 'Laravel', icon: '/assets/icon/icon-laravel.svg' },
   { name: 'Tailwindcss', icon: '/assets/icon/icon-tailwindcss.svg' },
   { name: 'Bootstrap', icon: '/assets/icon/icon-bootstrap.svg' },
+  { name: 'Prisma', icon: '/assets/icon/icon-prisma-orm.svg' },
   { name: 'MySQL', icon: '/assets/icon/icon-mySql.svg' },
   { name: 'Node.js', icon: '/assets/icon/icon-nodejs.svg' },
   { name: 'Git', icon: '/assets/icon/icon-git.svg' },
@@ -22,15 +23,39 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="w-full py-20 bg-white dark:bg-black transition-colors duration-300">
+    <section id="skills" className="w-full py-24 relative overflow-hidden transition-colors duration-300">
+      {/* Background Decoration */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/10 dark:bg-indigo-500/5 blur-[120px] rounded-full pointer-events-none" />
+
       <Container>
         {/* Heading */}
-        <div className="flex justify-center mb-6">
-          <h3 className="text-[#4B5563] dark:text-[#D1D5DB] rounded-3xl py-1 px-4 bg-[#E5E7EB] dark:bg-[#374151]">Skills</h3>
+        <div className="flex flex-col items-center mb-16">
+          <motion.h3 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="text-sm font-bold tracking-widest uppercase text-indigo-600 dark:text-indigo-400 mb-4 px-4 py-1 bg-indigo-50 dark:bg-indigo-900/30 rounded-full"
+          >
+            Capabilities
+          </motion.h3>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-6 text-center"
+          >
+            Technologies I Master
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-center text-slate-600 dark:text-slate-400 max-w-2xl text-lg"
+          >
+            The modern tools and technologies I use to bring ideas to life with clean, efficient code.
+          </motion.p>
         </div>
-
-        {/* Subheading */}
-        <p className="text-center text-[#4B5563] dark:text-[#D1D5DB] mb-10 text-lg">The skills, tools and technologies I am really good at:</p>
 
         {/* Skills Grid */}
         <motion.div
@@ -38,28 +63,37 @@ export default function Skills() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={{
-            hidden: { opacity: 0, y: 20 },
+            hidden: { opacity: 0 },
             visible: {
               opacity: 1,
-              y: 0,
-              transition: { staggerChildren: 0.1 },
+              transition: { staggerChildren: 0.05 },
             },
           }}
-          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-8 items-center justify-items-center"
+          className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-6"
         >
           {skills.map((skill) => (
             <motion.div
               key={skill.name}
               variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, scale: 0.8 },
+                visible: { opacity: 1, scale: 1 },
               }}
-              className="flex flex-col items-center gap-2"
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="glass-card group flex flex-col items-center justify-center p-6 rounded-2xl hover:border-indigo-500/50 transition-all duration-300"
             >
-              <div className="w-20 h-20 flex items-center justify-center">
-                <Image src={skill.icon} alt={skill.name} width={45} height={45} className="object-contain hover:scale-110 transition-transform" />
+              <div className="w-16 h-16 flex items-center justify-center mb-4 relative">
+                 <div className="absolute inset-0 bg-indigo-500/0 group-hover:bg-indigo-500/10 blur-xl rounded-full transition-all duration-300" />
+                <Image 
+                  src={skill.icon} 
+                  alt={skill.name} 
+                  width={48} 
+                  height={48} 
+                  className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 relative z-10" 
+                />
               </div>
-              <span className="text-sm lg:text-base text-[#4B5563] dark:text-[#D1D5DB]">{skill.name}</span>
+              <span className="text-sm font-semibold tracking-wide text-slate-600 dark:text-slate-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                {skill.name}
+              </span>
             </motion.div>
           ))}
         </motion.div>

@@ -12,85 +12,88 @@ export default function Experience() {
       company: 'PPKD Jakarta Pusat',
       date: 'Oct 2025 - Dec 2025',
       responsibilities: [
-        'Developed and built data-driven web applications , gaining experience in both frontend (React.js, Bootstrap) and backend (PHP with Laravel framework) development.',
-        'Successfully implemented responsive web interfaces while adhering to modern web design principles (HTML, CSS, JavaScript).',
-        'Managed the development environment using XAMPP and performed database operations (CRUD) utilizing MySQL via phpMyAdmin.',
+        'Developed data-driven web applications using React.js and Laravel.',
+        'Implemented responsive interfaces following modern UI principles.',
+        'Managed development environments with MySQL and Git.',
       ],
     },
-    // {
-    //   id: 2,
-    //   logo: '/assets/experience/logo-yarsi.svg',
-    //   role: 'Frontend Developer',
-    //   company: 'Universitas YARSI',
-    //   date: 'Mar 2025 - Aug 2025',
-    //   responsibilities: [
-    //     'Designed UI/UX prototypes in Figma and implemented them into functional code',
-    //     'Successfully launched the MRICondyleNet application, developing the entire responsive frontend using Next.js and Tailwind CSS.',
-    //     'Built a responsive interface for desktop, tablet, and smartphone',
-    //     'Integrated the interface with backend RESTful API services to fetch and display data.',
-    //     'Implemented key features such as dark and light mode support and ensured cross-device compatibility.',
-    //     'Managed version control and team collaboration using GitHub, overseeing the deployment pipeline on Vercel.',
-    //   ],
-    // },
     {
       id: 2,
       logo: '/assets/experience/logo-celerates.png',
-      role: 'Web Development & UI/UX Design',
-      company: 'Studi Independen MSIB Batch 6 - PT Mitra Talenta Grup',
+      role: 'Web Dev & UI/UX Design',
+      company: 'Studi Independen MSIB Batch 6',
       date: 'Feb 2024 - Jun 2024',
       responsibilities: [
-        'Collaborated with a development team to build and test features for a React-based web application',
-        'Designed UI/UX prototypes in Figma and implemented them into code',
-        'Developed a responsive interface optimized for desktop, tablet, and mobile devices',
-        'Maintained code integrity and facilitated team collaboration through the efficient use of Git and GitHub for version control.',
+        'Collaborated on React-based features for production applications.',
+        'Designed high-fidelity UI/UX prototypes in Figma.',
+        'Optimized responsive layouts for multiple device categories.',
+        'Facilitated team collaboration using Git version control.',
       ],
     },
   ];
 
   return (
-    <section id="experience" className="w-full py-20 bg-[#F9FAFB] dark:bg-[#111827] transition-colors duration-300">
+    <section id="experience" className="w-full py-24 bg-slate-50/50 dark:bg-slate-900/10 transition-colors duration-300">
       <Container>
-        {/* Heading */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="flex justify-center mb-8">
-          <h3 className="text-[#4B5563] dark:text-[#D1D5DB] rounded-3xl py-1 px-4 bg-[#E5E7EB] dark:bg-[#374151]">Experience</h3>
-        </motion.div>
-
-        {/* Title */}
-        <motion.h5 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} viewport={{ once: true }} className="text-2xl md:text-3xl mb-6 text-center text-black dark:text-white">
-          Here is a quick summary of my most recent experiences:
-        </motion.h5>
+         {/* Heading */}
+         <div className="flex flex-col items-center mb-16 px-4">
+          <motion.h3 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="text-sm font-bold tracking-widest uppercase text-indigo-600 dark:text-indigo-400 mb-4 px-4 py-1 bg-indigo-50 dark:bg-indigo-900/30 rounded-full"
+          >
+            My Path
+          </motion.h3>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-6 text-center"
+          >
+            Professional Experience
+          </motion.h2>
+        </div>
 
         {/* Experiences */}
-        <div className="flex flex-col gap-6">
+        <div className="max-w-4xl mx-auto space-y-8">
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.2 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex flex-col md:flex-row md:items-start gap-4 p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1F2937] shadow-sm"
+              className="glass-card flex flex-col md:flex-row md:items-start gap-8 p-8 rounded-3xl hover:border-indigo-500/30 transition-all group"
             >
               {/* Logo */}
-              <div className="flex-shrink-0">
-                <Image src={exp.logo} alt={exp.role} width={64} height={64} className="object-contain" />
+              <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 bg-white dark:bg-slate-800 rounded-2xl p-2 shadow-inner border border-slate-100 dark:border-slate-700">
+                <Image src={exp.logo} alt={exp.role} width={60} height={60} className="object-contain" />
               </div>
 
               {/* Content */}
-              <div className="flex-1">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-center">
-                  <h4 className="text-lg font-bold text-[#111827] dark:text-[#F9FAFB]">{exp.role}</h4>
-                  <span className="text-sm text-[#374151] dark:text-[#E5E7EB]">{exp.date}</span>
+              <div className="flex-1 space-y-4">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2">
+                  <h4 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    {exp.role}
+                  </h4>
+                  <span className="text-sm font-bold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">
+                    {exp.date}
+                  </span>
                 </div>
-                <p className="text-[#374151] dark:text-[#E5E7EB]">{exp.company}</p>
+                <p className="text-indigo-600 dark:text-indigo-400 font-bold tracking-wide uppercase text-xs">
+                  {exp.company}
+                </p>
                 {exp.responsibilities.length > 0 && (
-                  <ul className="mt-3 list-disc list-inside space-y-1 text-[#4B5563] dark:text-[#D1D5DB]">
+                  <ul className="space-y-3">
                     {exp.responsibilities.map((task, i) => (
-                      <li key={i}>{task}</li>
+                      <li key={i} className="flex gap-3 text-slate-600 dark:text-slate-400 leading-relaxed">
+                        <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0" />
+                        <span className="text-base">{task}</span>
+                      </li>
                     ))}
                   </ul>
                 )}
-                {/* <p className="mt-2 text-[#4B5563] dark:text-[#D1D5DB] leading-relaxed">{exp.description}</p> */}
               </div>
             </motion.div>
           ))}

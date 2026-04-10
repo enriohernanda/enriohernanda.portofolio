@@ -4,64 +4,70 @@ import Container from './layout/Container';
 
 export default function About() {
   return (
-    <section id="about" className="w-full py-20 bg-[#F9FAFB] dark:bg-[#111827] transition-colors duration-300">
+    <section id="about" className="w-full py-24 bg-white dark:bg-[#030712] transition-colors duration-300">
       <Container>
-        {/* Heading */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="flex justify-center mb-8">
-          <h3 className="text-[#4B5563] dark:text-[#D1D5DB] rounded-3xl py-1 px-4 bg-[#E5E7EB] dark:bg-[#374151]">About me</h3>
-        </motion.div>
+         {/* Heading */}
+         <div className="flex flex-col items-center mb-16 px-4">
+          <motion.h3 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="text-sm font-bold tracking-widest uppercase text-indigo-600 dark:text-indigo-400 mb-4 px-4 py-1 bg-indigo-50 dark:bg-indigo-900/30 rounded-full"
+          >
+            Behind the code
+          </motion.h3>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 text-center"
+          >
+            Curious about me?
+          </motion.h2>
+        </div>
 
-        {/* Title */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="text-2xl md:text-3xl font-semibold mb-6 text-start text-black dark:text-white"
-        >
-          Curious about me? Here you have it:
-        </motion.h2>
-
-        {/* Paragraphs */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} viewport={{ once: true }} className="space-y-4 text-[#4B5563] dark:text-[#D1D5DB] leading-relaxed">
-          <p>
-            Hi, I’m Enrio Hernanda — a passionate Web Developer with a strong focus on frontend development. I recently graduated with a Bachelor of Computer Science from Universitas YARSI (GPA 3.73/4.00), where I developed a deep interest
-            in building modern and user-friendly digital experiences.
-          </p>
-          <p>
-            My journey began with the fundamentals — HTML, CSS, and JavaScript — and has grown into hands-on experience using modern tools like React.js, Next.js, Tailwind CSS, and Laravel. I enjoy turning ideas and UI designs into fully
-            functional, responsive, and accessible web applications.
-          </p>
-          <p>
-            Throughout academic projects, independent learning, and practical experience, I’ve learned the importance of clean code, performance, and creating interfaces that work smoothly across devices. I also have experience in RESTful
-            API integration, version control with Git/GitHub, manual testing, and working in collaborative environments.
-          </p>
-          <p>I’m a continuous learner who loves exploring new technologies and improving my skills. For me, web development is not just about coding — it’s about solving problems, understanding users, and building meaningful solutions.</p>
-          <p>Finally, some quick bits about me.</p>
-        </motion.div>
-
-        {/* Bullets */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 text-[#4B5563] dark:text-[#D1D5DB]"
-        >
-          <ul className="list-disc list-inside space-y-2">
-            <li>Bachelor of Computer Science, Universitas YARSI (GPA 3.73/4.00)</li>
-            <li>Skilled in React.js, Next.js, Tailwind CSS, JavaScript, HTML/CSS, PHP, and Laravel</li>
-          </ul>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Passionate about frontend development and building scalable web applications</li>
-            <li>Open to collaboration and eager to grow in a professional environment</li>
-          </ul>
-        </motion.div>
-
-        {/* Closing */}
-        <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} viewport={{ once: true }} className="mt-8 text-[#4B5563] dark:text-[#D1D5DB]">
-          I’m always excited to connect, collaborate on impactful projects, and continue growing as a developer. Feel free to reach out — I’d be happy to chat!
-        </motion.p>
+        <div className="grid lg:grid-cols-1 gap-12 max-w-4xl mx-auto">
+          {/* Paragraphs */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }} 
+            whileInView={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }} 
+            className="space-y-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed"
+          >
+            <p className="first-letter:text-5xl first-letter:font-bold first-letter:text-indigo-600 first-letter:mr-3 first-letter:float-left">
+              I’m <span className="text-slate-900 dark:text-white font-semibold">Enrio Hernanda</span> — a passionate Web Developer with a strong focus on frontend development. I recently graduated with a Bachelor of Computer Science from Universitas YARSI (GPA 3.73/4.00), where I developed a deep interest in building modern and user-friendly digital experiences.
+            </p>
+            <p>
+              My journey began with the fundamentals — HTML, CSS, and JavaScript — and has grown into hands-on experience using modern tools like <span className="text-indigo-600 dark:text-indigo-400 font-medium">React.js, Next.js, and Tailwind CSS</span>. I enjoy turning complex designs into fully functional, responsive, and accessible web applications.
+            </p>
+            <p>
+              I believe that great web development is about more than just code; it's about solving problems and crafting meaningful solutions that users love. I’m a continuous learner, always exploring new technologies to sharpen my skills.
+            </p>
+            
+            <div className="pt-6 border-t border-slate-100 dark:border-slate-800">
+               <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-6 underline decoration-indigo-500/30 decoration-4 underline-offset-4">Quick facts about me:</h4>
+               <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="flex gap-4">
+                    <div className="w-2 h-2 rounded-full bg-indigo-600 mt-2 flex-shrink-0" />
+                    <p className="text-base font-medium">Bachelor of Computer Science (GPA 3.73/4.00)</p>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="w-2 h-2 rounded-full bg-indigo-600 mt-2 flex-shrink-0" />
+                    <p className="text-base font-medium">Next.js & React ecosystem specialist</p>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="w-2 h-2 rounded-full bg-indigo-600 mt-2 flex-shrink-0" />
+                    <p className="text-base font-medium">Passionate about clean code & UI/UX</p>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="w-2 h-2 rounded-full bg-indigo-600 mt-2 flex-shrink-0" />
+                    <p className="text-base font-medium">Eager to collaborate on impactful projects</p>
+                  </div>
+               </div>
+            </div>
+          </motion.div>
+        </div>
       </Container>
     </section>
   );
