@@ -20,14 +20,14 @@ const projects = [
     tags: ['React', 'Vite', 'TMDB API', 'TailwindCSS', 'Vercel'],
     link: 'https://movflix-two.vercel.app/',
   },
-  {
-    id: 3,
-    title: 'Mini Shop E-commerce',
-    image: '/assets/projects/project-minishop.svg',
-    description: 'Full-featured shopping experience with cart management, product filtering, and a sleek responsive checkout flow.',
-    tags: ['Next.js 13', 'TypeScript', 'Framer Motion', 'Local Storage', 'Vercel'],
-    link: 'https://mini-shop-ecommerce.vercel.app/',
-  },
+  // {
+  //   id: 3,
+  //   title: 'Mini Shop E-commerce',
+  //   image: '/assets/projects/project-minishop.svg',
+  //   description: 'Full-featured shopping experience with cart management, product filtering, and a sleek responsive checkout flow.',
+  //   tags: ['Next.js 13', 'TypeScript', 'Framer Motion', 'Local Storage', 'Vercel'],
+  //   link: 'https://mini-shop-ecommerce.vercel.app/',
+  // },
 ];
 
 export default function Projects() {
